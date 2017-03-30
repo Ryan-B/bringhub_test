@@ -1,0 +1,44 @@
+{
+  "variables": [],
+  "info": {
+    "name": "Seattle Weather",
+    "_postman_id": "a701c44e-3606-b49a-1562-93f5358c8575",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "35148e19-4f41-7582-5327-59e1d6d812b4",
+      "name": "api.openweathermap.org/data/2.5/forecast/daily?q={seattle},{us}&units=imperial&cnt=16&APPID=0f592ac82a2d3d57d080bdc0425c8020",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "",
+              "",
+              "tests[\"Response time is less than 800ms\"] = responseTime < 800;",
+              "",
+              "tests[\"Response body has name key\"] = responseBody.has(\"name\");",
+              "",
+              "tests[\"Response body has day key\"] = responseBody.has(\"day\");",
+              "",
+              "tests[\"Response body has Seattle\"] = responseBody.has(\"Seattle\");",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "api.openweathermap.org/data/2.5/forecast/daily?q={seattle},{us}&units=imperial&cnt=16&APPID=0f592ac82a2d3d57d080bdc0425c8020",
+        "method": "POST",
+        "header": [],
+        "body": {},
+        "description": "Seattle Weather 16 day forcast"
+      },
+      "response": []
+    }
+  ]
+}
