@@ -26,13 +26,13 @@
               "",
               "tests[\"Response body has Seattle\"] = responseBody.has(\"Seattle\");",
               "",
-              ""
+              "tests[\"code passes\"] = responseCode.code =-- 200;"
             ]
           }
         }
       ],
       "request": {
-        "url": "api.openweathermap.org/data/2.5/forecast/daily?q={seattle},{us}&units=imperial&cnt=16&APPID=0f592ac82a2d3d57d080bdc0425c8020",
+        "url": "api.openweathermap.org/data/2.5/forecast/daily?q={stpetersburg},{us}&units=imperial&cnt=16&APPID=0f592ac82a2d3d57d080bdc0425c8020",
         "method": "POST",
         "header": [],
         "body": {},
