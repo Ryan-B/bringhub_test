@@ -72,6 +72,41 @@
         "description": "Seattle Weather 16 day forcast stpete test"
       },
       "response": []
+    },
+    {
+      "_postman_id": "a2ab4cc3-debf-e68f-41e9-471955d0db1b",
+      "name": "api.openweathermap.org/data/2.5/forecast/daily?q={seattle},{us}&units=imperial&cnt=16&APPID=0f592ac82a2d3d57d080bdc0425c8020",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "",
+              "",
+              "tests[\"Response time is less than 800ms\"] = responseTime < 800;",
+              "",
+              "tests[\"Response body has name key\"] = responseBody.has(\"name\");",
+              "",
+              "tests[\"Response body has day key\"] = responseBody.has(\"day\");",
+              "",
+              "// tests[\"Response body has Seattle\"] = responseBody.has(\"Seattle\");",
+              "",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "tests[\"Response body has St Pete\"] = responseBody.has(\"Saint Petersburg\");"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "api.openweathermap.org/data/2.5/forecast/daily?q={stpetersburg},{us}&units=imperial&cnt=16&APPID=0f592ac82a2d3d57d080bdc0425c8020",
+        "method": "POST",
+        "header": [],
+        "body": {},
+        "description": "Seattle Weather 16 day forcast stpete test_2.0"
+      },
+      "response": []
     }
   ]
 }
